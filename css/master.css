@@ -1,3 +1,72 @@
+@font-face {
+font-family: "Mogena";
+src: url("font/Mogena.ttf");
+src: url("font/Mogena.ttf") format("ttf"),
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  z-index: 30;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 body{
-  background: lightblue;
+  background: white;
+  border: 8px solid #4733ee;
+}
+
+h1{
+  font-family: "Mogena";
+  color: #4733ee;
+  font-size: 36px;
+}
+
+li {
+  font-family: "Mogena";
+  font-size: 54px;
+}
+
+li a {
+  text-decoration: none;
+  color: #4733ee;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+li a:hover{
+  color: white;
+}
+section{
+  border-bottom: 2px solid red;
+  min-height: 100vh;
+}
+
+#main-menu{
+  background: #4733ee;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -1480px;
+  transition: 1s all ease;
+}
+
+#main-menu:target{
+  left:0;
 }
