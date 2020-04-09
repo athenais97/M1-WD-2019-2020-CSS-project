@@ -3,9 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>This is the first web page</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-<h1>Hello darkness my old friend</h1>
+
+<head>
+  <a href="#main-menu" onclick="myFunction(this)"</a>
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+  <nav id="main-menu">
+    <ul>
+      <li><a href="#section01">Go to section 01</a></li>
+      <li><a href="#section02">Go to section 02</a></li>
+    </ul>
+    <a href="#" class="close-menu">Close menu</a>
+  </nav>
+</head>
+<h1>My portfolio</h1>
+<section id="section01">
+  <p></p>
+</section>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+
   </body>
 </html>
