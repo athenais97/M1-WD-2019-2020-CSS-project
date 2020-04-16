@@ -9,30 +9,54 @@
   <body>
 
 <head>
-  <a href="#main-menu" onclick="myFunction(this)"</a>
+  <div>
+  <a href="#main-menu">
   <div class="bar1"></div>
   <div class="bar2"></div>
   <div class="bar3"></div>
+  </a>
 </div>
 
+
   <nav id="main-menu">
+    <a href="#main-menu" class="backdrop"></a>
     <ul>
-      <li><a href="#section01">Go to section 01</a></li>
-      <li><a href="#section02">Go to section 02</a></li>
+      <li><a href="#section01">My work</a></li>
+      <li><a href="#section02">My experience</a></li>
+      <li><a href="#section03">Contact me</a></li>
     </ul>
-    <a href="#" class="close-menu">Close menu</a>
+
+    <div>
+    <a href="#" class="close-menu">Fermer</a>
+    <div class="bar-ferme"></div>
+    <div class="bar-ferme"></div>
+    <div class="bar-ferme"></div>
+  </div>
+
   </nav>
 </head>
 <h1>My portfolio</h1>
 <section id="section01">
+
+  <figure class="rotating-wheels-01">
+    <img class="circle01" src="imgs/big-wheel-04.svg" alt="">
+    <img class="circle02" src="imgs/big-wheel-03.svg" alt="">
+    <img class="circle03" src="imgs/big-wheel-02.svg" alt="">
+    <img class="circle04" src="imgs/big-wheel-01.svg" alt="">
+  </figure>
+
+</section>
+
+<section id="section02">
   <p></p>
 </section>
 
-<script>
-function myFunction(x) {
-  x.classList.toggle("change");
-}
-</script>
+
+<section id="section03">
+  <p></p>
+</section>
+
+
 
   </body>
 </html>
