@@ -114,3 +114,38 @@ section{
 .circle04 {
     animation: rotation02 2s infinite linear;
 }
+
+.abcder {
+
+    /* Display */
+  display: flex;
+
+  /* Content Direction */
+  flex-direction: row;
+
+  /* Justify Content: Main Axis */
+  justify-content: space-around;
+
+  /* Align Content: Cross Axis */
+  align-items: center;
+
+  /* Content Wrapping */
+  flex-wrap: wrap;
+
+  /* Justify Content: Cross Axis */
+  align-content: flex-start;
+
+
+}
+
+.abcder span{
+  border: 2px solid green;
+}
+
+span {
+  margin: 20px;
+  padding: 100px 100px;
+  display: flex;
+  font-size: 100px;
+  font-family: "Optiker";
+}
