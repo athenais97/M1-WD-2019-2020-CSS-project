@@ -5,6 +5,13 @@ src: url("../font/Optiker-K.ttf");
 src: url("../font/Optiker-K.ttf") format("ttf"),
 }
 
+@font-face {
+
+font-family: "Alfa";
+src: url("../font/AlfaSlabOne-Regular.ttf");
+src: url("../font/AlfaSlabOne-Regular.ttf") format("ttf"),
+}
+
 
 .bar1, .bar2, .bar3 {
   width: 35px;
@@ -115,7 +122,7 @@ section{
     animation: rotation02 2s infinite linear;
 }
 
-.abcder {
+#abcder {
 
     /* Display */
   display: flex;
@@ -124,7 +131,7 @@ section{
   flex-direction: row;
 
   /* Justify Content: Main Axis */
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   /* Align Content: Cross Axis */
   align-items: center;
@@ -137,18 +144,32 @@ section{
 
 
 }
-
-.abcder span{
-  border: 2px solid green;
+svg{
+  width: 20vh;
 }
 
-span {
-  margin: 20px;
-  padding: 100px 100px;
-  display: flex;
-  font-size: 100px;
+h3{
   font-family: "Optiker";
+  font-size: 24px;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+
+}
+#abcder div{
+  border: 2px solid #4733ee;
+  margin: 20px;
+  flex-basis: 220px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 #containergrid {
   display: grid;
