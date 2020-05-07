@@ -1,0 +1,23 @@
+:root {
+    --gap: 2em;
+    --gap2: 4em;
+    --boxwidth: calc(100vw - var(--gap2));
+    --boxheight: calc(100vh - var(--gap2));
+}
+
+body {
+  background: #f9f9f9;
+  margin: 0;
+  background:#000;
+  font-family: georgia, serif;
+  scroll-behavior: smooth;
+}
+
+.proxy-anchor {
+    display: block;
+    position: absolute;
+    width: var(--boxwidth);
+    height: var(--boxheight);
+    z-index: -1;
+    opacity: 0;
+}

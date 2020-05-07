@@ -1,0 +1,60 @@
+.proxy-anchor { display: none;}
+
+		/* desktop navigation: transforms for proxy anchors. */
+
+				/* sets X/Y coordinates for each cell of the grid */
+				:target ~ .grid { transform: translate3d( 0, 0, 0); }
+				#p1:target ~ .grid { transform: translate3d( 0, 0, 0); }
+				#p2:target ~ .grid { transform: translate3d( calc(-1 * var(--boxwidth) ), 0, 0); }
+				#p3:target ~ .grid { transform: translate3d( calc(-2 * var(--boxwidth) ), 0, 0); }
+				#p4:target ~ .grid { transform: translate3d( 0, calc(-1 * var(--boxheight)), 0); }
+				#p5:target ~ .grid { transform: translate3d( calc(-1 * var(--boxwidth) ), calc(-1 * var(--boxheight)), 0); }
+				#p6:target ~ .grid { transform: translate3d( calc(-2 * var(--boxwidth) ), calc(-1 * var(--boxheight)), 0); }
+				#p7:target ~ .grid { transform: translate3d( 0, calc(-2 * var(--boxheight)), 0); }
+				#p8:target ~ .grid { transform: translate3d( calc(-1 * var(--boxwidth) ), calc(-2 * var(--boxheight)), 0); }
+				#p9:target ~ .grid { transform: translate3d( calc(-2 * var(--boxwidth) ), calc(-2 * var(--boxheight)), 0); }
+				#p10:target ~ .grid { transform: translate3d( 0, calc(-3 * var(--boxheight)), 0); }
+				#p11:target ~ .grid { transform: translate3d( calc(-1 * var(--boxwidth) ), calc(-3 * var(--boxheight)), 0); }
+				#p12:target ~ .grid { transform: translate3d( calc(-2 * var(--boxwidth) ), calc(-3 * var(--boxheight)), 0); }
+
+		/* container elements */
+				.wrapper {
+					border : 4px solid red;
+					position: fixed;
+					top: 1.5em;
+					left: 1.5em;
+					width: calc(100vw - var(--gap));
+					height: calc(100vh - var(--gap))
+				}
+
+				.grid {
+					position: absolute;
+					transition: transform .7s ease-in-out;
+					width: 300vw;
+					height: 400vh;
+					display: grid;
+					grid-template: repeat(4, var(--boxheight)) var(--gap) / repeat(3, var(--boxwidth));
+					grid-gap: .5em;
+				}
+				.footer{
+					grid-column: 1 / span 3;
+				}
+
+		/* TEXT PAGE */
+
+			/* desktop grid format */
+				.item {transition: transform .2s ease-in-out;}
+
+				.item:hover {transform:scale(1.01); z-index: 100;}
+
+				/* sits within page content, click to navigate to next page in sequence */
+				.item a.next-page{
+					display: inline-block;
+					text-decoration: none;
+					background: #000;
+					color : #fff;
+					padding: 1em .75em;
+					border-top-right-radius: 45%;
+					border-bottom-right-radius: 45%;
+					z-index: 2000;
+				}
