@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/deck.css">
+    <link rel="stylesheet" href="css/layouts.css">
+    <link rel="stylesheet" href="css/ui-mecanisms.css">
+  </head>
+  <body class="">
+
+  	<div class="wrapper">
+  	<!-- Proxy anchors associate with layout ids in CSS. Transforms applied to scroll pages to view in desktop mode-->
+  	    <div class="proxy-anchor" id="p1" tabindex="0">
+        Step 01 - proxy
+        </div>
+  	    <div class="proxy-anchor" id="p2" tabindex="0">Step 1 : Custome properties Variables</div>
+  	    <div class="proxy-anchor" id="p3" tabindex="0">Step 2 : html containers</div>
+  		  <div class="proxy-anchor" id="p4" tabindex="0">Step 3 : Styles on the containers</div>
+  	    <div class="proxy-anchor" id="p5" tabindex="0">Step 04 : The "pages"</div>
+  	    <div class="proxy-anchor" id="p6" tabindex="0">Step 05 : Anchors and Links</div>
+  		<div class="proxy-anchor" id="p7" tabindex="0">Step 06 : Moving it about</div>
+  	    <div class="proxy-anchor" id="p8" tabindex="0">Step 07 : Now you use it!</div>
+  	    <div class="proxy-anchor" id="p9" tabindex="0">Have fun</div>
+  	<!--/ Proxy anchors -->
+
+
+  		<div class="grid">
+
+  			<div class="item" id="item1">
+  				<div id="image1" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Cover Artwork"></div>
+  				</div>
+  				<div id="page1" class="layout home">
+  						<div class="content">
+  							<h1 class="huge">Step 01</h1>
+  							<p>Pour comprendre le code CSS custom properties</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/var" target="_blank">MDN Custom properties</a></p>
+                <pre>
+                <code>
+                  :root {
+                      --gap: 2em;
+                      --gap2: 4em;
+                      --boxwidth: calc(100vw - var(--gap2));
+                      --boxheight: calc(100vh - var(--gap2));
+                  }
+                </code>
+                </pre>
+  						</div>
+  						<div class="sidebar">
+  							<a href="#p2" class="next-page">Next</a>
+  						</div>
+  				</div>
+  			</div>
+
+  			<div class="item" id="item2">
+  				<div id="image2" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page2" class="layout">
+  						<div class="content">
+  							<h1>Step 02</h1>
+  							<p>HTML containers structure</p>
+                <pre>
+                <code>
+                    	&lt;div class="wrapper">
+                          ... some stuff here
+                        	&lt;div class="grid">
+                          ... page item here
+                          &lt;/div>
+                      &lt;/div>
+                </code>
+                </pre>
+  						</div>
+  						<div class="sidebar">
+  							<a href="#p3" class="next-page">Next</a>
+  						</div>
+  				</div>
+  			</div>
+
+  			<div class="item" id="item3">
+  				<div id="image3" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page3" class="layout">
+  						<div class="content">
+  							<h2>Step 03</h2>
+  							<p>Styles on the containers</p>
+                <pre>
+<code>
+.wrapper {
+  border : 4px solid red;
+  position: fixed;
+  top: 1.5em;
+  left: 1.5em;
+  width: calc(100vw - var(--gap));
+  height: calc(100vh - var(--gap))
+  }
+
+  .grid {
+    position: absolute;
+    transition: transform .7s ease-in-out;
+    width: 300vw;
+    height: 400vh;
+    display: grid;
+    grid-template: repeat(4, var(--boxheight)) var(--gap) / repeat(3, var(--boxwidth));
+    grid-gap: .5em;
+    }
+    </code>
+    </pre>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">Shorthand properties</a>
+    </p>
+  						</div>
+  						<div class="sidebar">
+  							<a href="#p4" class="next-page">Next</a>
+  						</div>
+  				</div>
+  			</div>
+
+  			<div class="item" id="item4">
+  				<div id="image4" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page4" class="layout">
+  						<div class="content">
+  							<h1>Step 04</h1>
+  							<p>The "pages" html</p>
+                <pre>
+                  <code>
+                    &lt;div class="item" id="item4">
+                    ... content goes here
+                    &lt;/div>
+                  </code>
+                </pre>
+                <p>The "pages" css</p>
+                <pre>
+                  <code>
+                    .item {
+                      position: relative;
+                      width: var(--boxwidth);
+                      height: var(--boxheight);
+                    }
+                    .item {transition: transform .2s ease-in-out;}
+
+                    .item:hover {transform:scale(1.01); z-index: 100;}
+                  </code>
+                </pre>
+                <p>The rest of the layouts are in the layouts css</p>
+  						</div>
+  						<div class="sidebar">
+  							<a href="#p5" class="next-page">Next</a>
+  						</div>
+  				</div>
+  			</div>
+
+  			<div class="item" id="item5">
+  				<div id="image5" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page5" class="layout">
+  						<div class="content">
+  							<h2>Step 05 : Anchors and Links</h2>
+  							<p>The Next link at the bottom of each "page", points to a dispalyed : none anchor at the top of the page. </p>
+                <pre>
+                <code>
+
+&lt;div class="proxy-anchor" id="p1" tabindex="0">
+
+                </code>
+                </pre>
+  						</div>
+  						<div class="sidebar">
+  							<a href="#p6" class="next-page">Next</a>
+  						</div>
+  				</div>
+  			</div>
+
+
+  			<div class="item" id="item6">
+  				<div id="image6" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page6" class="layout">
+  					<div class="content">
+  						<h1>Step 06 : Moving it about</h1>
+  						<p>Combined with a transform this targeted anchor moves the pages</p>
+              <p>for example</p>
+              <pre>
+                <code>
+#p3:target ~ .grid { transform: translate3d( calc(-2 * var(--boxwidth) ), 0, 0);}
+                </code>
+              </pre>
+              <p>This uses <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator" target="_blank">sibling combinators</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" target="_blank">calc()</a>
+              </p>
+  					</div>
+  					<div class="sidebar">
+  						<a href="#p7" class="next-page">Next</a>
+  					</div>
+  				</div>
+  			</div>
+
+
+  			<div class="item" id="item7">
+  				<div id="image7" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page7" class="layout">
+  					<div class="content">
+              <h1>Step 07</h1>
+  						<p>An example of a full-page image, with caption text.</p>
+  					</div>
+  					<div class="sidebar">
+  						<a href="#p8" class="next-page">Next</a>
+  					</div>
+  				</div>
+  			</div>
+
+
+  			<div class="item" id="item8">
+  				<div id="image8" class="left-box">
+  					<div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+  				</div>
+  				<div id="page8" class="layout">
+            <div class="content">
+  						<h1>Step 08</h1>
+  						<p>Now you use it!</p>
+  					</div>
+  					<div class="sidebar">
+  						<a href="#p9" class="next-page">Next</a>
+  					</div>
+  				</div>
+  			</div>
+
+
+  			<div class="item" id="item9">
+          <div id="image9" class="left-box">
+            <div class="left-box-container"><img src="images/placeholder.png" alt="Artwork"></div>
+          </div>
+  				<div id="page9" class="layout">
+  					<div class="content">
+              <h1>Step 09</h1>
+  						<p>Here is the original : http://www.hi.agency/deck/</p>
+  					</div>
+  					<div class="sidebar">
+  						<a href="#p1" class="next-page">Next</a>
+  					</div>
+  				</div>
+  			</div>
+
+
+  			<div class="footer">
+          Signature
+        </div>
+  		</div>
+
+
+  	</div> <!--### class="wrapper" ENDs here -->
+
+  </body>
+</html>
