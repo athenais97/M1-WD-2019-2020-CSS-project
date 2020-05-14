@@ -24,7 +24,6 @@ src: url("../font/AlfaSlabOne-Regular.ttf") format("ttf"),
 
 body{
   background: white;
-  border: 8px solid #4733ee;
 }
 
 h1{
@@ -147,12 +146,13 @@ section{
 
 #abcder > div{
   margin: 20px;
-  flex-basis: 220px;
+  flex-basis: 300px;
   flex-grow: 0;
   flex-shrink: 1;
-  min-height: 240px;
-  box-shadow: -1px 10px 20px -9px #4733ee;
+  min-height: 450px;
+  box-shadow: -1px 10px 10px -13px #4733ee;
   border-radius: 20px;
+  border : 1px solid #4733ee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,7 +185,7 @@ section{
 }
 
 svg{
-  width: 20vh;
+  width: 40vh;
   align-self: center;
 }
 
