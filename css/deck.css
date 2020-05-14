@@ -1,3 +1,10 @@
+@font-face {
+
+font-family: "Alfa";
+src: url("../font/AlfaSlabOne-Regular.ttf");
+src: url("../font/AlfaSlabOne-Regular.ttf") format("ttf"),
+}
+
 :root {
     --gap: 2em;
     --gap2: 4em;
@@ -19,4 +26,9 @@ body {
     height: var(--boxheight);
     z-index: -1;
     opacity: 0;
+}
+
+.huge{
+  font-size: 30px;
+  font-family: "Alfa";
 }
