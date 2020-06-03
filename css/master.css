@@ -23,15 +23,19 @@ src: url("../font/AlfaSlabOne-Regular.ttf") format("ttf"),
 }
 
 body{
-  background: white;
+
 }
 
 h1{
   font-family: "Alfa";
-  color: #4733ee;
   font-size: 36px;
+  text-align: center;
 }
 
+p{
+  font-family: Arial;
+  text-align: center;
+}
 li {
   font-family: "Mogena";
   font-size: 54px;
@@ -146,48 +150,45 @@ section{
 
 #abcder > div{
   margin: 20px;
+
   flex-basis: 300px;
   flex-grow: 0;
   flex-shrink: 1;
   min-height: 450px;
-  box-shadow: -1px 10px 10px -13px #4733ee;
+  box-shadow: -1px 10px 10px -13px #f7c698;
   border-radius: 20px;
-  border : 1px solid #4733ee;
+  border : 1px solid #C06C84;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+img{
+  width: 40vh;
+  align-content: center;
+}
 .card-description {
-  background: #fff;
+  background: #f7c698;
   text-align: justify;
   height: 0px;
   overflow: hidden;
-  color: #fff;
   min-height: 0;
   transition: color 0.5s 0.5s, padding 0.5s, min-height 0.5s;
 }
 
-.lettre-A:hover {
-  background-color: #4733ee;
-}
-.lettre-A:hover h3{
-  color: white;
+.lettre:hover {
+  background-color: #f7c698;
 }
 
-.lettre-A:hover .card-description {
+
+.lettre:hover .card-description {
   height: initial;
   min-height: 150px;
   padding: 20px 35px;
   border-radius: 20px;
-  background-color: #4733ee;
-  color: white;
+  background-color: #f7c698;
 }
 
-svg{
-  width: 40vh;
-  align-self: center;
-}
 
 h3{
   font-family: "Alfa";
@@ -214,8 +215,4 @@ a{
 #containergrid:target {
   background: green;
   display: grid;
-}
-
-#containergrid span{
-  border: 2px solid green;
 }
