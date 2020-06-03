@@ -32,3 +32,11 @@ body {
   font-size: 30px;
   font-family: "Alfa";
 }
+
+.home-link{
+  display: block;
+  border: 4px solid black;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
